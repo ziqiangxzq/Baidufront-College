@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.button{
+				position: relative;
+				width: 6rem;
+			    padding: 0.4rem;
+				border-radius:1rem;
+				color:#444;
+				font-size:0.8rem;
+				text-align: center;
+				border: 1px solid #444;
+			}
+			.box{
+				position: relative;
+				top:-10rem;
+				width: 0;
+				display: flex;
+				font-size: 1.5rem;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 0.8rem 0;
+				color:#444444;
+				border-bottom: 3px solid #fff;
+			}
+			#checkbox:checked + .box{
+				transition: all 2s;
+				width:7rem;
+				color: #000;
+				border-bottom: 3px solid #000;
+			}
+			.contentbox{
+				position: relative;
+				width: 100vw;
+				height:80vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="contentbox">
+		<div class="button" onclick="changetype()">点击切换样式</div>
+		<input type="checkbox" id="checkbox" style="visibility: hidden;">
+		<div class="box">Baidufront College</div>
+	    </div>
+	</body>
+	<script type="text/javascript">
+	function changetype(){
+		var checkbox=document.getElementById("checkbox")
+		if(checkbox.checked==true){
+			checkbox.checked=false
+		}else{
+			checkbox.checked=true
+		}
+	}	
+	</script>
+</html>
