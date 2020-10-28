@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>N0.2 初步接触 CSS 2D 变形</title>
+		<link type="image/x-ico" rel="icon" href="../190.ico">
+		<style>
+			.box{
+				position: relative;
+				width: 4rem;
+				height:4rem;
+				background-color: #f9f9f9;
+				border: 1px solid #efefef;
+				color:#333;
+				display: flex;
+				margin-right: 2rem;
+                align-items: center;
+				justify-content: center;	
+				margin-bottom:2rem;
+			}
+			.boxbox{
+				position: relative;
+				display: flex;
+				align-items: center;
+				flex-wrap:wrap
+			}
+			.b1{
+				transform: skew(30deg);
+			}
+			.b2{
+				transform: scale(0.5,1);
+			}
+			.b3{
+				transform: rotate(45deg);
+			}
+			.b4{
+				transform: translate(10px,20px);
+			}
+			.b5{
+				transform: skew(30deg) scale(0.5,1) rotate(45deg) translate(10px,20px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="boxbox">
+		<div class="box b0">box0</div>
+		<div class="box b1">box1</div>
+		<div class="box b2">box2</div>
+		<div class="box b3">box3</div>
+		<div class="box b4">box4</div>
+		<div class="box b5">box5</div>
+		</div>
+	</body>
+</html>
