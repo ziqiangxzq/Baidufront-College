@@ -4,7 +4,11 @@
 		<meta charset="utf-8">
 		<title>N0.2 初步接触 CSS 2D 变形</title>
 		<link type="image/x-ico" rel="icon" href="../190.ico">
-		<style>
+		<style>			
+		     body{
+				margin: 0;
+				padding: 0;
+			}
 			.box{
 				position: relative;
 				width: 4rem;
@@ -18,11 +22,15 @@
 				justify-content: center;	
 				margin-bottom:2rem;
 			}
+
 			.boxbox{
 				position: relative;
 				display: flex;
+				width: 100vw;
+				height: 70vh;
 				align-items: center;
-				flex-wrap:wrap
+				flex-wrap:wrap;
+				justify-content: center;
 			}
 			.b1{
 				transform: skew(30deg);
