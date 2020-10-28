@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>No.4 - 3D 空间的卡片翻转动效</title>
+		<link type="image/x-ico" rel="icon" href="../190.ico">
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.rebox{
+				perspective: 1000;
+			}
+			.dbox{
+				transform-style: preserve-3d;
+				transition: .5s;
+				position: relative;
+				width: 100vw;
+				height: 80vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.card{
+				position: absolute;
+				backface-visibility: hidden;
+				border-radius: 0.8rem;
+				overflow: hidden;
+			}
+			.rebox:hover >.dbox{
+				
+				transform: rotateY(180deg);
+			}
+			.f{
+				transform: rotateY(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="rebox">
+			<div class="dbox" >
+				<div class="card z"><img  src="image/zm.jpg"></div>
+				<div class="card f"><img  src="image/fm.jpg"></div>
+			</div>
+		</div>
+	</body>
+</html>
