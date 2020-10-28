@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>No.5 纯 CSS 制作绕中轴旋转的立方体</title>
+		<link rel="icon" type="image/x-icon" url="../190.ico">
+	<style>
+		body{
+			background-color: #000000;
+		}
+		@keyframes spin {
+			from { transform: rotateY(0)  rotateX(0);}
+			to { transform: rotateY(360deg) rotateX(360deg); }
+		}
+		@keyframes spinfa {
+			from {transform:  rotateY(360deg) rotateX(360deg);}
+			to { transform: rotateY(0)  rotateX(0); }
+		}
+	.prebox{
+		perspective: 500px;
+		perspective-origin: 50% 50px;
+	}
+	.dbox{
+		margin-top: 14rem;
+		transition:all 2s linear; 
+		position: relative;
+		transform-style: preserve-3d;       
+		/* background-color: antiquewhite; */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.dbox:hover{
+		/* transition: all 1s linear; */
+		animation: spin 5s infinite linear;
+	}
+	.cubeunit{
+		position: absolute;
+		width: 150px;
+		height:150px;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+/* .back {
+	transform: translateZ(-75px) rotateY(180deg);
+} */
+.back{
+	transform: translateZ(-75px);
+}
+.top{
+	transform-origin: top center;
+	transform: rotateX(-90deg) translateY(-75px);
+}
+.bottom {
+	transform: rotateX(90deg) translateY(75px);
+	transform-origin: bottom center;
+}
+.front {
+	transform: translateZ(75px);
+}
+.left{
+	transform:rotateY(-90deg) translateX(-75px);
+	transform-origin: left center;
+}
+.right{
+	transform: rotateY(-90deg) translateX(75px);
+	transform-origin: right center;
+}
+.back div{
+	height:100%;
+	width: 100%;
+	background-color:#132a13;
+}
+.front div{
+	height: 100%;
+	width: 100%;
+	background-color:#31572c;}
+.top div{
+	height: 100%;
+	width: 100%;
+	background-color:#4f772d;
+}
+.bottom div{
+	height: 100%;
+	width: 100%;
+	background-color:#90a955;
+}
+.left div{
+	height: 100%;
+	width: 100%;
+	background-color:#ecf39e;
+}
+.right div{
+	height: 100%;
+	width: 100%;
+	background-color:#456827;
+}
+	</style>
+	</head>
+	<body>
+		<div class="prebox">
+			<div class="dbox">
+				<div class="cubeunit back"><div></div></div>
+				<div class="cubeunit front"><div></div></div>
+			    <div class="cubeunit bottom"><div></div></div>
+				<div class="cubeunit top"><div></div></div>
+				<div class="cubeunit left"><div></div></div>
+				<div class="cubeunit right"><div></div></div>
+			</div>
+		</div>
+	</body>
+</html>
